@@ -1,6 +1,6 @@
 # 小智项目迁移
 
-在新电脑装好 Git 和 Git LFS，使用有仓库权限的 GitHub 账号克隆。
+在新电脑装好 Git 和 Git LFS 后直接克隆。仓库公开，克隆无须登录 GitHub。
 
 ```powershell
 git lfs install
