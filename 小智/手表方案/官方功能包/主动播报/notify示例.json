@@ -1,0 +1,8 @@
+{
+  "type": "notify",
+  "audio_url": "https://example.com/study-chime.ogg",
+  "subtitles": [
+    {"start_ms": 0, "text": "学习时间到"},
+    {"start_ms": 800, "text": "起来活动一下吧"}
+  ]
+}

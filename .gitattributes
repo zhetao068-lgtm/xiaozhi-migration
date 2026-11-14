@@ -1,0 +1,5 @@
+* -text
+/工具与依赖/Bambu_Studio_win-v02.09.01.70.exe filter=lfs diff=lfs merge=lfs -text
+/工具与依赖/Python-建模依赖.zip filter=lfs diff=lfs merge=lfs -text
+/工具与依赖/Python-MCP与音频依赖.zip filter=lfs diff=lfs merge=lfs -text
+/过程资料/小智建模切片与固件调研.zip filter=lfs diff=lfs merge=lfs -text

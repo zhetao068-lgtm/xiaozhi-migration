@@ -1,0 +1,23 @@
+﻿小智项目迁移说明
+备份日期 2026-11-14
+
+1. 打开「小智\最终方案.md」。要继续做履带表带，打开「小智\履带表带锁定版-V2\打印与装配.md」。保留「小智」内部的目录结构，烧录和建模脚本会读取相邻目录。
+2. 打开 3MF 和切片可用「工具与依赖」中的 Bambu Studio 安装包。要继续未保存的试装盘，分别打开「Bambu未保存草稿\V1.3mf」和「V2.3mf」。同目录的 autosave.zip 保存了原始自动保存材料。自定义 Generic PETG @BBL A1 预设随包保留。
+3. 「原始3MF」保留三份下载的模型，「过程资料」保留建模、切片、固件及参考资料。烧录时按「小智」内对应板型的说明操作。要重新编译固件，按「小智\固件与源码\文件和编译说明.md」配置 ESP-IDF。
+4. 云端智能体、设备绑定和云端记忆用原小智账号访问。如果使用 MCP 学习工具，按「小智\手表方案\官方功能包\MCP\说明.md」从当前智能体复制接入点。原项目目录和默认位置中未发现实际学习数据库，烧录工具的默认目录中未发现原机 Flash 备份。
+
+可选的离线 Python 环境（Windows x64）
+在克隆目录打开 PowerShell，执行以下命令。使用已有 STL、3MF 和随包烧录工具无须安装 Python。
+
+$runtime = Join-Path (Get-Location) 'Python311'
+$deps = Join-Path $runtime 'Lib\site-packages'
+New-Item -ItemType Directory -Path $runtime -Force | Out-Null
+tar.exe -xf '.\工具与依赖\Python-3.11.3-x64-便携运行时.zip' -C $runtime
+New-Item -ItemType Directory -Path $deps -Force | Out-Null
+tar.exe -xf '.\工具与依赖\Python-建模依赖.zip' -C $deps
+tar.exe -xf '.\工具与依赖\Python-MCP与音频依赖.zip' -C $deps
+& "$runtime\python.exe" -B '.\小智\手表方案\官方功能包\MCP\本机自测.py'
+
+建模脚本可用上述 python.exe 执行。生成提示音时可用 --ffmpeg 指向 Python311\Lib\site-packages\imageio_ffmpeg\binaries\ffmpeg-win-x86_64-v7.1.exe。编辑 SCAD 可使用随包的 OpenSCAD。
+
+SHA256SUMS.txt 记录了所有迁移文件的校验值和相对路径。

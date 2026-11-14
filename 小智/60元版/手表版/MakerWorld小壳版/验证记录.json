@@ -1,0 +1,54 @@
+{
+  "printer": "Bambu Lab A1 mini",
+  "layer_mm": "0.2",
+  "material": "PETG",
+  "nozzle_mm": "0.4",
+  "plate": "Textured PEI Plate",
+  "walls": "5",
+  "infill": "35%",
+  "support": "false",
+  "time_seconds": "8040",
+  "weight_g": "30.22",
+  "mesh": {
+    "shell": {
+      "mm": [
+        49.6,
+        66.2,
+        21.6
+      ],
+      "volume_mm3": 16229.3
+    },
+    "bezel": {
+      "mm": [
+        49.6,
+        53.6,
+        3.4
+      ],
+      "volume_mm3": 4675.8
+    },
+    "trial": {
+      "mm": [
+        49.6,
+        53.6,
+        3.4
+      ],
+      "volume_mm3": 2314.4
+    },
+    "tray": {
+      "mm": [
+        43.6,
+        47.6,
+        2.5
+      ],
+      "volume_mm3": 2765.5
+    },
+    "gauge": {
+      "mm": [
+        46.0,
+        53.0,
+        1.8
+      ],
+      "volume_mm3": 1187.9
+    }
+  }
+}

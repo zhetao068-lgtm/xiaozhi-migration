@@ -1,0 +1,15 @@
+{
+    "filament_cost": [
+        "20"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "filament_settings_id": [
+        "Generic PETG @BBL A1 - 拷贝"
+    ],
+    "from": "User",
+    "inherits": "Generic PETG @BBL A1",
+    "name": "Generic PETG @BBL A1 - 拷贝",
+    "version": "2.7.0.9"
+}
